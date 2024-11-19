@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style/CadastroTarefas.css">
 </head>
 <body>
-    <header >
+    <header>
         <h1>Gerenciamento de Tarefas</h1>
         <nav class="menu">
             <ul>

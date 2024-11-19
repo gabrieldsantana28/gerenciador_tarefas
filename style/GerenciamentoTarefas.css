@@ -50,6 +50,10 @@ header>h1 {
     margin: 10px 0px 10px 0px;
 }
 
+label {
+    margin-left: 8px;
+}
+
 button {
     background-color: rgb(5, 60, 180);
     color: white;
