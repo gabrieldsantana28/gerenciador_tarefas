@@ -9,6 +9,13 @@
 <body>
     <header >
         <h1>Gerenciamento de Tarefas</h1>
+        <nav class="menu">
+            <ul>
+                <li><a href="#cadastro-usuarios">Cadastro de Usuários</a></li>
+                <li><a href="#cadastro-tarefas">Cadastro de Tarefas</a></li>
+                <li><a href="#gerenciar-tarefas">Gerenciar Tarefas</a></li>
+            </ul>
+        </nav>
     </header>
     <section>
     <h1 class="title">Cadastro de Usuários</h1>
