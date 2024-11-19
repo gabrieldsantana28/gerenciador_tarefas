@@ -1,3 +1,4 @@
+<?php include 'consultar_tarefas.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,18 +22,18 @@
     <h1 class="title">Tarefas</h1>
     <div class="column">
             <h3>A Fazer</h3>
-            <?php foreach ($viagens_pendentes as $viagem): ?>
+            <?php foreach ($tarefas_afazer as $tarefa): ?>
                 <div class="card">
-                    <p><strong>Descrição:</strong> <?= $viagem['descricao'] ?></p>
-                    <p><strong>Rota:</strong> <?= $viagem['rota'] ?></p>
-                    <p><strong>Prioridade:</strong> <?= $viagem['prioridade'] ?></p>
-                    <p><strong>Motorista:</strong> <?= $viagem['motorista'] ?></p>
+                    <p><strong>Descrição:</strong> <?= $tarefa['descricao_tarefa'] ?></p>
+                    <p><strong>Setor:</strong> <?= $tarefa['setor_tarefa'] ?></p>
+                    <p><strong>Prioridade:</strong> <?= $tarefa['prioridade_tarefa'] ?></p>
+                    <p><strong>Vinculado a:</strong> <?= $tarefa['usuario'] ?></p>
                     <form action="Form_Editar_Viagem.php" method="get" style="display:inline;">
-                        <input type="hidden" name="id" value="<?= $viagem['id'] ?>">
+                        <input type="hidden" name="id" value="<?= $tarefa['id'] ?>">
                         <button type="submit" class="btn">Editar</button>
                     </form>
                     <form action="excluir_viagem.php" method="post" style="display:inline;" onsubmit="return confirm('Tem certeza que deseja excluir esta viagem?');">
-                        <input type="hidden" name="id" value="<?= $viagem['id'] ?>">
+                        <input type="hidden" name="id" value="<?= $tarefa['id'] ?>">
                         <button type="submit" class="btn">Excluir</button>
                     </form>
                 </div>
@@ -41,18 +42,18 @@
 
         <div class="column">
             <h3>Fazendo</h3>
-            <?php foreach ($viagens_em_transito as $viagem): ?>
+            <?php foreach ($tarefas_fazendo as $tarefa): ?>
                 <div class="card">
-                    <p><strong>Descrição:</strong> <?= $viagem['descricao'] ?></p>
-                    <p><strong>Setor:</strong> <?= $viagem['rota'] ?></p>
-                    <p><strong>Prioridade:</strong> <?= $viagem['prioridade'] ?></p>
-                    <p><strong>Vinculado a:</strong> <?= $viagem['motorista'] ?></p>
+                    <p><strong>Descrição:</strong> <?= $tarefa['descricao_tarefa'] ?></p>
+                    <p><strong>Setor:</strong> <?= $tarefa['setor_tarefa'] ?></p>
+                    <p><strong>Prioridade:</strong> <?= $tarefa['prioridade_tarefa'] ?></p>
+                    <p><strong>Vinculado a:</strong> <?= $tarefa['usuario'] ?></p>
                     <form action="Form_Editar_Viagem.php" method="get" style="display:inline;">
-                        <input type="hidden" name="id" value="<?= $viagem['id'] ?>">
+                        <input type="hidden" name="id" value="<?= $tarefa['id'] ?>">
                         <button type="submit" class="btn">Editar</button>
                     </form>
                     <form action="excluir_viagem.php" method="post" style="display:inline;" onsubmit="return confirm('Tem certeza que deseja excluir esta viagem?');">
-                        <input type="hidden" name="id" value="<?= $viagem['id'] ?>">
+                        <input type="hidden" name="id" value="<?= $tarefa['id'] ?>">
                         <button type="submit" class="btn">Excluir</button>
                     </form>
                 </div>
@@ -61,18 +62,18 @@
 
         <div class="column">
             <h3>Pronto</h3>
-            <?php foreach ($viagens_finalizadas as $viagem): ?>
+            <?php foreach ($tarefas_pronto as $tarefa): ?>
                 <div class="card">
-                    <p><strong>Descrição:</strong> <?= $viagem['descricao'] ?></p>
-                    <p><strong>Rota:</strong> <?= $viagem['rota'] ?></p>
-                    <p><strong>Prioridade:</strong> <?= $viagem['prioridade'] ?></p>
-                    <p><strong>Motorista:</strong> <?= $viagem['motorista'] ?></p>
+                    <p><strong>Descrição:</strong> <?= $tarefa['descricao'] ?></p>
+                    <p><strong>Setor:</strong> <?= $tarefa['rota'] ?></p>
+                    <p><strong>Prioridade:</strong> <?= $tarefa['prioridade'] ?></p>
+                    <p><strong>Vinculado a:</strong> <?= $tarefa['motorista'] ?></p>
                     <form action="Form_Editar_Viagem.php" method="get" style="display:inline;">
-                        <input type="hidden" name="id" value="<?= $viagem['id'] ?>">
+                        <input type="hidden" name="id" value="<?= $tarefa['id'] ?>">
                         <button type="submit" class="btn">Editar</button>
                     </form>
                     <form action="excluir_viagem.php" method="post" style="display:inline;" onsubmit="return confirm('Tem certeza que deseja excluir esta viagem?');">
-                        <input type="hidden" name="id" value="<?= $viagem['id'] ?>">
+                        <input type="hidden" name="id" value="<?= $tarefa['id'] ?>">
                         <button type="submit" class="btn">Excluir</button>
                     </form>
                 </div>
