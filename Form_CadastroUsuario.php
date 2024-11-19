@@ -11,8 +11,8 @@
         <h1>Gerenciamento de Tarefas</h1>
         <nav class="menu">
             <ul>
-                <li><a href="Form_CadastrarUsuario.php">Cadastro de Usuários</a></li>
-                <li><a href="Form_CadastrarTarefas.php">Cadastro de Tarefas</a></li>
+                <li><a href="Form_CadastroUsuario.php">Cadastro de Usuários</a></li>
+                <li><a href="Form_CadastroTarefas.php">Cadastro de Tarefas</a></li>
                 <li><a href="Form_GerenciamentoTarefas.php">Gerenciar Tarefas</a></li>
             </ul>
         </nav>
