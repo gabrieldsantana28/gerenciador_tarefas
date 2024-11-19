@@ -19,7 +19,7 @@
     </header>
     <section>
     <h1 class="title">Cadastro de Usuários</h1>
-        <form action="">
+        <form action="cadastrar_usuario.php" method="POST">
             <div>
                 <label for="nome">Nome:</label> <br>
                 <input type="text" name="nome" id="nome">
