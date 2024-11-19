@@ -1,3 +1,4 @@
+<?php include 'consultar_usuario.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +20,7 @@
     </header>
     <section>
     <h1 class="title">Cadastro de Tarefas</h1>
-        <form action="">
+        <form action="cadastrar_tarefa.php" method="POST">
             <div>
                 <label for="descricao">Descrição:</label> <br>
                 <input type="text" name="descricao" id="descricao">
@@ -31,13 +32,17 @@
             <div>
                 <label for="usuario">Usuário:</label> <br>
                 <select name="usuario" id="usuario">
-                    <option value="">Nome do Usuário</option>
+                    <?php foreach ($usuarios as $usuario): ?>
+                        <option value="<?= $usuario['id_usuario'] ?>"><?= $usuario['nome_usuario'] ?></option>
+                    <?php endforeach; ?>
                 </select>
             </div>
             <div>
                 <label for="prioridade">Prioridade:</label> <br>
                 <select name="prioridade" id="prioridade">
-                    <option value="">Prioridade aqui</option>
+                    <option value="baixa">Baixa</option>
+                    <option value="media">Média</option>
+                    <option value="alta">Alta</option>
                 </select>
             </div>
             <button>Cadastrar</button>
