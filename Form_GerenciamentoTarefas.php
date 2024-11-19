@@ -28,12 +28,12 @@
                     <p><strong>Setor:</strong> <?= $tarefa['setor_tarefa'] ?></p>
                     <p><strong>Prioridade:</strong> <?= $tarefa['prioridade_tarefa'] ?></p>
                     <p><strong>Vinculado a:</strong> <?= $tarefa['usuario'] ?></p>
-                    <form action="Form_Editar_Viagem.php" method="get" style="display:inline;">
-                        <input type="hidden" name="id" value="<?= $tarefa['id'] ?>">
+                    <form action="Form_EditarTarefa.php" method="get" style="display:inline;">
+                        <input type="hidden" name="id" value="<?= $tarefa['id_tarefa'] ?>">
                         <button type="submit" class="btn">Editar</button>
                     </form>
-                    <form action="excluir_viagem.php" method="post" style="display:inline;" onsubmit="return confirm('Tem certeza que deseja excluir esta viagem?');">
-                        <input type="hidden" name="id" value="<?= $tarefa['id'] ?>">
+                    <form action="excluir_tarefa.php" method="post" style="display:inline;" onsubmit="return confirm('Tem certeza que deseja excluir esta viagem?');">
+                        <input type="hidden" name="id" value="<?= $tarefa['id_tarefa'] ?>">
                         <button type="submit" class="btn">Excluir</button>
                     </form>
                 </div>
@@ -48,12 +48,12 @@
                     <p><strong>Setor:</strong> <?= $tarefa['setor_tarefa'] ?></p>
                     <p><strong>Prioridade:</strong> <?= $tarefa['prioridade_tarefa'] ?></p>
                     <p><strong>Vinculado a:</strong> <?= $tarefa['usuario'] ?></p>
-                    <form action="Form_Editar_Viagem.php" method="get" style="display:inline;">
-                        <input type="hidden" name="id" value="<?= $tarefa['id'] ?>">
+                    <form action="Form_EditarTarefa.php" method="get" style="display:inline;">
+                        <input type="hidden" name="id" value="<?= $tarefa['id_tarefa'] ?>">
                         <button type="submit" class="btn">Editar</button>
                     </form>
-                    <form action="excluir_viagem.php" method="post" style="display:inline;" onsubmit="return confirm('Tem certeza que deseja excluir esta viagem?');">
-                        <input type="hidden" name="id" value="<?= $tarefa['id'] ?>">
+                    <form action="excluir_tarefa.php" method="post" style="display:inline;" onsubmit="return confirm('Tem certeza que deseja excluir esta viagem?');">
+                        <input type="hidden" name="id" value="<?= $tarefa['id_tarefa'] ?>">
                         <button type="submit" class="btn">Excluir</button>
                     </form>
                 </div>
@@ -64,16 +64,16 @@
             <h3>Pronto</h3>
             <?php foreach ($tarefas_pronto as $tarefa): ?>
                 <div class="card">
-                    <p><strong>Descrição:</strong> <?= $tarefa['descricao'] ?></p>
-                    <p><strong>Setor:</strong> <?= $tarefa['rota'] ?></p>
-                    <p><strong>Prioridade:</strong> <?= $tarefa['prioridade'] ?></p>
-                    <p><strong>Vinculado a:</strong> <?= $tarefa['motorista'] ?></p>
-                    <form action="Form_Editar_Viagem.php" method="get" style="display:inline;">
-                        <input type="hidden" name="id" value="<?= $tarefa['id'] ?>">
+                    <p><strong>Descrição:</strong> <?= $tarefa['descricao_tarefa'] ?></p>
+                    <p><strong>Setor:</strong> <?= $tarefa['setor_tarefa'] ?></p>
+                    <p><strong>Prioridade:</strong> <?= $tarefa['prioridade_tarefa'] ?></p>
+                    <p><strong>Vinculado a:</strong> <?= $tarefa['usuario'] ?></p>
+                    <form action="Form_EditarTarefa.php" method="get" style="display:inline;">
+                        <input type="hidden" name="id" value="<?= $tarefa['id_tarefa'] ?>">
                         <button type="submit" class="btn">Editar</button>
                     </form>
-                    <form action="excluir_viagem.php" method="post" style="display:inline;" onsubmit="return confirm('Tem certeza que deseja excluir esta viagem?');">
-                        <input type="hidden" name="id" value="<?= $tarefa['id'] ?>">
+                    <form action="excluir_tarefa.php" method="post" style="display:inline;" onsubmit="return confirm('Tem certeza que deseja excluir esta viagem?');">
+                        <input type="hidden" name="id" value="<?= $tarefa['id_tarefa'] ?>">
                         <button type="submit" class="btn">Excluir</button>
                     </form>
                 </div>
