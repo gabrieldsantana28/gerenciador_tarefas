@@ -36,6 +36,15 @@
                         <input type="hidden" name="id" value="<?= $tarefa['id_tarefa'] ?>">
                         <button type="submit" class="btn">Excluir</button>
                     </form>
+                    <form action="alterar_status.php" method="post">
+                        <input type="hidden" name="id_tarefa" value="<?= $tarefa['id_tarefa'] ?>">
+                        <select name="status">
+                            <option value="afazer">A fazer</option>
+                            <option value="fazendo">Fazendo</option>
+                            <option value="pronto">Pronto</option>
+                        </select>
+                        <button type="submit" class="btn">Alterar Status</button>
+                    </form>
                 </div>
             <?php endforeach; ?>
         </div>
@@ -55,6 +64,15 @@
                     <form action="excluir_tarefa.php" method="post" style="display:inline;" onsubmit="return confirm('Tem certeza que deseja excluir esta viagem?');">
                         <input type="hidden" name="id" value="<?= $tarefa['id_tarefa'] ?>">
                         <button type="submit" class="btn">Excluir</button>
+                    </form>
+                    <form action="alterar_status.php" method="post">
+                        <input type="hidden" name="id_tarefa" value="<?= $tarefa['id_tarefa'] ?>">
+                        <select name="status">
+                            <option value="afazer">A fazer</option>
+                            <option value="fazendo">Fazendo</option>
+                            <option value="pronto">Pronto</option>
+                        </select>
+                        <button type="submit" class="btn">Alterar Status</button>
                     </form>
                 </div>
             <?php endforeach; ?>
@@ -76,8 +94,19 @@
                         <input type="hidden" name="id" value="<?= $tarefa['id_tarefa'] ?>">
                         <button type="submit" class="btn">Excluir</button>
                     </form>
+                    <form action="alterar_status.php" method="post">
+                        <input type="hidden" name="id_tarefa" value="<?= $tarefa['id_tarefa'] ?>">
+                        <select name="status">
+                            <option disable selected value="">Selecione</option>
+                            <option value="afazer">A fazer</option>
+                            <option value="fazendo">Fazendo</option>
+                            <option value="pronto">Pronto</option>
+                        </select>
+                        <button type="submit" class="btn">Alterar Status</button>
+                    </form>
                 </div>
             <?php endforeach; ?>
+            
         </div>
     </section>
 </body>
